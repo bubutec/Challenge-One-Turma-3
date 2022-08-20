@@ -1,5 +1,18 @@
-function encriptar(){
-    let e = document.getElementById("entrada").value;
+const entrada = document.getElementById("entrada");
+const saida = document.getElementById("saida");
+
+function btnEncriptar(){
+    const encriptado = encriptar(entrada.value);
+    saida.value = encriptado;
+}
+
+function btnDesencriptar(){
+    const desencriptado = desencriptar(saida.value);
+    saida.value = desencriptado;
+}
+
+function encriptar(e){
+    console.log("desencriptar");
     if(e != ""){
         let matrizCodigo = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
         e = e.toLowerCase();
@@ -9,11 +22,11 @@ function encriptar(){
             }
         }
     }
-    document.getElementById("saida").value = e;
+    return e;
 }
 
-function descriptar(){
-    let d = document.getElementById("entrada").value;
+function desencriptar(d){
+    console.log("desencriptar");
     if(d != ""){
         let matrizCodigo = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
         d = d.toLowerCase();
@@ -23,5 +36,5 @@ function descriptar(){
             }
         }
     }
-    document.getElementById("saida").value = d;
+    return d;
 }
