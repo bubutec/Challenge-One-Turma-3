@@ -1,4 +1,5 @@
 function encriptar(){
+    document.getElementById("imagem").style.display = "none";
     let e = document.getElementById("entrada").value;
     if(e != ""){
         let matrizCodigo = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
@@ -10,9 +11,11 @@ function encriptar(){
         }
     }
     document.getElementById("saida").value = e;
+    //document.getElementById("entrada").value = "";
 }
 
 function descriptar(){
+    document.getElementById("imagem").style.display = "none";
     let d = document.getElementById("entrada").value;
     if(d != ""){
         let matrizCodigo = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
@@ -24,4 +27,11 @@ function descriptar(){
         }
     }
     document.getElementById("saida").value = d;
+}
+
+function copiar() {
+    var content = document.getElementById('saida');
+    content.select();
+    document.execCommand('copy');
+    alert("Texto copiado para area de transferência!");
 }

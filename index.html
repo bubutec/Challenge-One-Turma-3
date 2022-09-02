@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
     <head>
         <title>Decodificador de Textos</title>
@@ -7,14 +7,45 @@
         <script src="script.js"></script>
     </head>
     <body>
-        <header>
+        <main>
+
             <section>
-                <img src="desenho.svg">
-                <textarea id="entrada" placeholder="texto de entrada"></textarea>
-                <textarea id="saida" placeholder="texto de saída"></textarea>
-                <button onclick="encriptar();">ENCRIPTAR</button>
-                <button onclick="descriptar();">DESENCRIPTAR</button>
+                <div class="b1">
+                    <img src="imgs/logo.svg" height="48">
+                </div>
             </section>
-        </header>
+
+            <section>
+                <div class="b2">
+                    <div class="spa"></div>
+                    <textarea id="entrada" placeholder="Digite seu texto"></textarea>
+                    <div class="alt">
+                        <img src="imgs/impor.svg" width="16" height="16">
+                        &nbsp;Apenas letras minúsculas e sem acento.
+                    </div>
+                    <div class="bt2">
+                        <button class="encriptar" onclick="encriptar();">Criptografar</button>
+                        <div></div>
+                        <button class="descriptar" onclick="descriptar();">Descriptografar</button>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="b3">
+                    <div class="msg">
+                        <div id="imagem">
+                            <img src="imgs/img2.svg">
+                            <img src="imgs/img1.svg">
+                        </div>
+                        <textarea id="saida"></textarea>
+                    </div>
+                    <div class="bt">
+                        <button class="copiar" onclick="copiar();">Copiar</button>
+                    </div>
+                </div>
+            </section>
+
+        </main>
     </body>
 </html>
